@@ -119,8 +119,8 @@ body {
 
 .top, .bottom {
   content: ' ';
-  width: 25cm;
-  height: 37.5cm;
+  width: 22cm;
+  height: 33cm;
 }
 
 .top {
@@ -131,7 +131,7 @@ body {
 .top:after {
   content: ' ';
   display: block;
-  height: 21.5cm;
+  height: 17cm;
   width: .75cm;
   right: -1mm;
   margin: 0 auto;
@@ -143,11 +143,16 @@ body {
   border-bottom-left-radius: 1cm;
   border-right-width:0;
 }
-
+.front-back-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
 .front,.back {
   content: ' ';
-  width: 12.5cm;
-  height: 37.5cm;
+  width: 11cm;
+  height: 33cm;
 }
 
 .front {
@@ -156,10 +161,10 @@ body {
 }
 
 .left,.right {
-  margin-left: 1.5cm;
+  margin:0.5cm auto;
   content: ' ';
-  width: 24.5cm;
-  height: 12.5cm;
+  width: 22cm;
+  height: 11cm;
   border-top-left-radius: 2cm;
   position: relative;
 }
@@ -365,15 +370,14 @@ body {
     h3 {
         page-break-after: avoid;
     }
-    .instructions {
+    h1,.instructions {
       display: none;
     }
-    .stencils {
-      page-break-before: : always;
+    .stencil, .front-back-container {
+      page-break-after: always;
       padding-bottom: : 0.5cm;
     }
-    .stencils, .stencil{
-      margin-left:0;
-      margin-right: 0;
+    .stencil.left, .stencil.right {
+      page-break-after:auto;
     }
 }
