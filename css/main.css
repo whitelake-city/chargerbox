@@ -102,19 +102,34 @@ body {
   font-family: helvetica, sans-serif;
 }
 
+.instructions, .tools, h1 {
+  width: 100%;
+  max-width: 69rem;
+  margin: auto;
+}
+
 .stencils {
   padding: 2em;
   background-color: #fff;
   color: #000;
 }
-
+.drills,
 .stencil {
   border: 1mm dotted #555;
+  position: relative;
+}
+.stencil {
   margin-bottom: 0.5cm
 }
 
 .stencil h3 {
     margin:2em;
+}
+
+.stencil h3.vertical {
+  width: 0;
+  word-wrap: break-word;
+  margin: auto;
 }
 
 .top, .bottom {
@@ -152,10 +167,14 @@ body {
 .front,.back {
   content: ' ';
   width: 11cm;
+}
+
+.back {
   height: 33cm;
 }
 
 .front {
+  height: 34cm;
   border-top-left-radius: 2cm;
   border-bottom-left-radius: 2cm;
 }
@@ -163,32 +182,100 @@ body {
 .left,.right {
   margin:0.5cm auto;
   content: ' ';
-  width: 22cm;
+  width: 21.5cm;
   height: 11cm;
-  border-top-left-radius: 2cm;
   position: relative;
 }
+
+.left {
+  border-top-left-radius: 2cm;
+}
+
+.right {
+  border-top-right-radius: 2cm;
+}
+
 .left:before,
 .right:before {
   content: ' ';
   display: block;
   height: 1.5cm;
-  width: 1.5cm;
+  width: 0.5cm;
   margin: 0 auto;
   border: 1mm dotted #555;
   position: absolute;
   bottom: -1mm;
-  left:-1.6cm;
+}
+
+.left:before {
+  left:-0.6cm;
   border-right-width: 0;
 }
 
+.right:before {
+  right:-0.6cm;
+  border-left-width: 0;
+}
+
+.image {
+  object-fit: contain;
+  margin: 1em auto;
+  max-width: 100%;
+}
+
+.drills {
+  border-radius: 50%;
+  width: 5mm;
+  height: 5mm;
+}
+
+.front .drill_1,
+.front .drill_2 {
+  position: absolute;
+  right: 5mm
+}
+
+.front .drill_1 {
+    top: 25mm
+}
+
+.front .drill_2 {
+  bottom:25mm
+}
 
 
+.back .drill_1 {
+  top: 20mm;
+}
 
+.back .drill_2 {
+  bottom: 20mm;
+}
 
+.back .drill_1,
+.back .drill_2 {
+  position: absolute;
+  left: 5mm
+}
 
+.left .drill_1,
+.right .drill_1 {
+  position: absolute;
+  bottom: 5mm;
+  left: 20mm;
+}
 
+.left .drill_2,
+.right .drill_2 {
+  position: absolute;
+  bottom: 5mm;
+  right: 20mm;
+}
 
+.block_of_wood {
+  height: 8cm;
+  width: 10mm;
+}
 
 
 
